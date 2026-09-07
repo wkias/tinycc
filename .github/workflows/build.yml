@@ -46,8 +46,8 @@ jobs:
     - name: Compress and Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ matrix.artifact_name }}
-        path: D:/a/tinycc/tinycc/win32/
+        name: tcc-win64-msvc
+        path: win32/
 
   test-i386-win32:
     runs-on: windows-2025
