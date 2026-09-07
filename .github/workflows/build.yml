@@ -43,6 +43,11 @@ jobs:
         call build-tcc.bat -c cl -t x86_64
         cd ..\tests
         call test-win32.bat all -k
+    - name: Compress and Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.artifact_name }}
+        path: D:/a/tinycc/tinycc/win32/
 
   test-i386-win32:
     runs-on: windows-2025
